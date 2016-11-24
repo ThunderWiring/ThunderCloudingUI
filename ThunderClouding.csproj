@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0D8AA1F-2D2D-49DC-94D1-6E22DFB0AC0F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThunderClouding</RootNamespace>
+    <AssemblyName>ThunderClouding</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="ThunderClouding_Widgets\TC_CircularProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThunderClouding_Widgets\TC_CircularProgressBar.Designer.cs">
+      <DependentUpon>TC_CircularProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\FileGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControls\FileGridView.Designer.cs">
+      <DependentUpon>FileGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\FileListEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControls\FileListEntry.Designer.cs">
+      <DependentUpon>FileListEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\FileViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControls\FileViewer.Designer.cs">
+      <DependentUpon>FileViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThunderCloudingMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThunderCloudingMainForm.Designer.cs">
+      <DependentUpon>ThunderCloudingMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\homePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControls\homePage.Designer.cs">
+      <DependentUpon>homePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="userControls\MenuGridList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControls\MenuGridList.Designer.cs">
+      <DependentUpon>MenuGridList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\ProfileInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControls\ProfileInfo.Designer.cs">
+      <DependentUpon>ProfileInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\StorageDevicesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControls\StorageDevicesControl.Designer.cs">
+      <DependentUpon>StorageDevicesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\USB_deviceEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControls\USB_deviceEntry.Designer.cs">
+      <DependentUpon>USB_deviceEntry.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ThunderClouding_Widgets\TC_CircularProgressBar.resx">
+      <DependentUpon>TC_CircularProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControls\FileGridView.resx">
+      <DependentUpon>FileGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControls\FileListEntry.resx">
+      <DependentUpon>FileListEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControls\FileViewer.resx">
+      <DependentUpon>FileViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThunderCloudingMainForm.resx">
+      <DependentUpon>ThunderCloudingMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControls\homePage.resx">
+      <DependentUpon>homePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="userControls\MenuGridList.resx">
+      <DependentUpon>MenuGridList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControls\ProfileInfo.resx">
+      <DependentUpon>ProfileInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControls\StorageDevicesControl.resx">
+      <DependentUpon>StorageDevicesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControls\USB_deviceEntry.resx">
+      <DependentUpon>USB_deviceEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_trnsparent.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
